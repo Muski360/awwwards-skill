@@ -1,0 +1,4 @@
+interface:
+  display_name: "Awwwards Art Direction"
+  short_description: "Design distinct, award-caliber web experiences"
+  default_prompt: "Use $awwwards-skill to turn this frontend into a distinct, high-impact web experience without generic visual SLOP."
