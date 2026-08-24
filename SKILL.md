@@ -1,93 +1,91 @@
 ---
 name: awwwards-skill
-description: Art-direct and implement award-caliber websites with distinct identity, editorial composition, expressive typography, purposeful motion, and performance-aware effects. Use when an AI coding agent must create, redesign, or audit a landing page, portfolio, brand site, campaign, product story, or experimental web interface; remove generic AI-style visual patterns; or turn a conventional frontend into a memorable experience.
+description: Art-direct, build, redesign, or visually audit distinctive brand, campaign, portfolio, and experimental websites. Use when project-specific identity matters; skip routine UI and non-visual fixes.
 ---
 
 # Awwwards Skill
 
-Build each experience around a specific brand idea. Use effects to express that idea, guide attention, or improve feedback. Treat decoration without purpose as SLOP.
+Create expressive sites from the project's brand, content, audience, and constraints. Treat fashion-led choices as SLOP when they serve no identity, hierarchy, interaction, or meaning.
 
-## Required References
+Preserve user scope, requirements, facts, and stack; user direction and documented brand rules outrank this skill's defaults. Extract useful mechanisms from awarded sites, never their art direction.
 
-- Read [references/visual-identity.md](references/visual-identity.md) before choosing typography, color, imagery, layout, or art direction.
-- Read [references/slop-patterns.md](references/slop-patterns.md) before implementing or auditing a visual concept.
-- Read [references/evaluation-framework.md](references/evaluation-framework.md) before the final review or when comparing concepts.
-- Read [references/motion-and-implementation.md](references/motion-and-implementation.md) when the work includes animation, WebGL, 3D, scroll effects, or a performance-sensitive frontend.
-- Read [references/examples.md](references/examples.md) when the concept lacks specificity or the interface needs a SLOP-to-distinctive reformulation.
+## Choose the Mode
 
-## Core Standard
+- **Build or redesign:** Define a direction, implement it, and verify the result.
+- **Concept or art direction:** Produce the direction and rationale without changing code unless the user asks.
+- **Audit or review:** Stay read-only unless the user asks for fixes. Report evidence, severity, and a concrete reformulation.
+- **Narrow visual change:** Fit the existing system. Do not force a new brief or redesign unrelated areas.
 
-Use “SLOP” for fashionable treatments applied without a relationship to the brand, content, or interaction. A polished surface can still be SLOP when the same design could serve a fintech app, coffee shop, AI startup, or photographer with minor copy changes.
+## Reference Routing
 
-Create distinction through a coherent system:
+Read only the references that match the current work. Resolve paths relative to this file.
 
-- one visual thesis
-- two or three identity anchors
-- one dominant composition per section
-- one motion grammar
-- one technical budget
+- For a build, redesign, or art-direction concept, read [visual identity](references/visual-identity.md) and the [SLOP catalog](references/slop-patterns.md).
+- For a visual audit, comparison, or requested score, read the [SLOP catalog](references/slop-patterns.md) and [evaluation framework](references/evaluation-framework.md). Add the visual-identity guide when proposing a new direction.
+- For animation, scroll effects, WebGL, 3D, heavy media, or performance-sensitive work, read [motion and implementation](references/motion-and-implementation.md).
+- For a narrow visual change, follow the existing system and read only the guide covering the changed concern. Skip references when the user fully specified the choice.
+- When a concept remains generic after examining project evidence, read the [reformulation examples](references/examples.md).
 
-Do not imitate an awarded site. Extract a useful mechanism such as pacing, cropping, type scale, scene transitions, or interaction rhythm, then rebuild it from the project’s own content.
+## Direction Brief
+
+For a substantial concept, build, or redesign, record this brief before styling. One line per field is enough:
+
+- **Visual thesis:** Connect a project truth and intended feeling to a visual approach.
+- **Identity anchors:** Choose two or three repeatable type, color, image, material, or composition traits.
+- **Content spine:** Order sections or states around the audience's reading, task, or decision path.
+- **Interaction rule:** State what motion or input adds; `none` is valid.
+- **Technical budget:** Name target browsers/devices, existing stack constraints, acceptable asset or rendering cost, and the failure fallback.
+
+For an audit, infer the fields and flag gaps. A narrow change needs only the relevant fields. When evidence is sparse, state reversible assumptions.
 
 ## Workflow
 
-1. **Inspect the project.** Identify the framework, routes, components, content, assets, brand cues, browser targets, and current performance constraints. Preserve the existing stack unless the task requires a change.
-2. **Write the creative brief.** Define the visual thesis, identity anchors, emotional target, content spine, interaction thesis, and technical budget. Use one sentence for each.
-3. **Build the visual system.** Choose typography, palette, grid, image treatment, material language, and motion behavior from evidence in the brief. Follow `references/visual-identity.md`.
-4. **Compose the narrative.** Give each section one job and one dominant visual idea. Favor a strong opening, clear progression, proof or depth, and a decisive close.
-5. **Implement the static core.** Establish semantic structure, responsive layout, content hierarchy, and image behavior before adding complex motion.
-6. **Add purposeful interaction.** Use the lightest tool that can express the interaction thesis. Follow `references/motion-and-implementation.md`.
-7. **Run the SLOP audit.** Review each prominent treatment against `references/slop-patterns.md`. Remove or reformulate choices that fail the identity test.
-8. **Verify the result.** Test responsive states, keyboard use, contrast, reduced motion, overflow, loading behavior, and the project’s existing checks. Review the result with `references/evaluation-framework.md`. Run Lighthouse and smoke tests after coherent implementation milestones when the environment supports them. Report measured results without inventing scores.
+### Build or Redesign
 
-## Visual Decision Gate
+1. Inspect the stack, routes, components, content, assets, brand cues, browser targets, and performance constraints.
+2. Write the brief. Derive the visual system and compose each section around a clear job and reading path.
+3. Implement a semantic, responsive, visible static core before motion, WebGL, or other enhancement.
+4. Add interaction with the lightest capable tool in the project. Add a dependency when the direction requires its capability.
+5. Run the SLOP audit, verify the result, and fix the highest-impact failure within scope. Do not remove a sound choice to satisfy a quota.
 
-Answer these questions before adding a prominent visual device:
+### Audit or Review
+
+1. Gather rendered desktop and mobile evidence when tools permit. Otherwise inspect source and assets, then label visual and runtime conclusions as unverified.
+2. Reconstruct the brief. Prioritize identity, hierarchy, usability, accessibility, performance, and content-integrity findings by severity and evidence. Give a project-specific reformulation.
+3. Change files only when the user requested implementation, then rerun the relevant checks.
+
+## Prominent-Treatment Gate
+
+Before adding or approving a prominent device, ask:
 
 1. Which brand or content idea does it reinforce?
-2. Which hierarchy, affordance, or narrative problem does it solve?
-3. Could the same treatment move unchanged to an unrelated site?
-4. What rendering, loading, motion, and accessibility costs does it add?
+2. Which hierarchy, affordance, feedback, or narrative problem does it solve?
+3. Could it move unchanged to an unrelated site?
+4. What loading, rendering, motion, and accessibility cost does it add?
 
-Remove the device when the first two answers lack substance. Reformulate it when the third answer is yes. Simplify it when the cost exceeds its contribution.
+Remove it when the first two answers lack substance. Reformulate it when it transfers unchanged. Simplify it or provide a static alternative when its cost exceeds its contribution.
 
-## Non-Negotiable Rules
+## Hard Requirements
 
-- **Unmotivated gradient -> SLOP.** Remove it. Keep a gradient only when it models light, depth, data, state, or a documented brand behavior.
-- **No visual identity -> SLOP.** Stop styling and derive a visual thesis plus identity anchors before writing more CSS.
-- **Default card grid -> SLOP.** Use editorial grouping, rhythm, dividers, media, tables, or spatial hierarchy unless a card represents a real interactive object.
-- **Effect stack -> SLOP.** Do not combine glow, glass, grain, parallax, magnetic controls, custom cursors, and 3D to manufacture interest.
-- **Template typography -> SLOP.** Create hierarchy through type choice, scale contrast, measure, spacing, and alignment. A giant heading alone does not create identity.
-- **Decorative 3D -> SLOP.** Use 3D only when form, space, or interaction carries the product story. Provide a strong static fallback.
-- **Motion without narrative or feedback -> SLOP.** Give each animation a role in entrance, continuity, depth, state, or response.
-- **Generic copy -> SLOP.** Write concrete product or brand language. Remove vague claims, filler labels, and design commentary from the interface.
-- Keep content legible and controls operable without animation.
-- Preserve semantic HTML, focus visibility, contrast, and usable target sizes.
+- Use verified facts. Do not invent clients, awards, logos, metrics, testimonials, capabilities, or research. Mark permitted placeholders.
+- Preserve semantic HTML, accessible names, roles, and states, logical focus order, visible focus, contrast, readable content, and usable targets.
+- Keep content and controls operable without animation, hover, WebGL, or a fine pointer. Respect reduced-motion preferences without removing necessary state feedback.
+- Keep core content visible if fonts, media, scripts, hydration, observers, or enhancement libraries fail.
+- Preserve native scrolling and expected input behavior. Never trap navigation to stage an effect.
+- Do not claim browser, accessibility, performance, or Lighthouse checks that did not run.
 
-## Implementation Discipline
+## Design and Implementation Defaults
 
-- Use the project’s design tokens and component patterns when they support the new direction. Refactor them when they encode the problem.
-- Prefer CSS for layout, transitions, and simple reveals. Add GSAP, Framer Motion, Three.js, or React Three Fiber only when the concept needs their capabilities.
-- Animate transforms and opacity where possible. Avoid layout thrashing and continuous work outside the viewport.
-- Treat 3D and heavy media as progressive enhancement. Cap rendering cost, lazy-load scenes, pause hidden work, and provide fallbacks.
-- Test at narrow mobile, common laptop, and wide desktop sizes. Check intermediate widths instead of tuning only fixed screenshots.
-- Respect `prefers-reduced-motion`, keyboard navigation, touch input, and coarse pointers.
-- Keep the page usable while fonts, media, or scripts load.
+- Build distinction through recurring choices, not an effect stack.
+- Use editorial grouping, rhythm, media, lists, tables, or spatial hierarchy before a card grid. Keep cards for discrete interactive objects.
+- Create a type voice through role, scale, width, measure, spacing, and alignment. A giant heading does not supply identity on its own.
+- Tie gradients, texture, glass, unusual cursors, marquees, motion, and 3D to the brief. Weak motivation creates SLOP, not the ingredient itself.
+- Prefer project tokens, existing dependencies, and CSS for simple behavior. Treat heavy media and 3D as progressive enhancement. Recompose for small screens and intermediate widths.
 
-## Delivery Contract
+## Verification and Delivery
 
-Before implementation, state:
+Run applicable project lint, type, test, and build checks. With browser tools, inspect narrow, intermediate, laptop, and wide layouts in declared targets; test keyboard and focus behavior, reduced motion, touch, zoom/reflow, overflow, loading failure, console errors, and failed requests. Use Lighthouse on a production-equivalent build when performance work warrants it, and report its configuration as lab evidence.
 
-- visual thesis
-- identity anchors
-- content spine
-- interaction thesis
-- technical budget
+Name unavailable tools, target browsers, and unverified checks.
 
-After implementation, report:
-
-- files changed
-- distinctive choices and their rationale
-- responsive and accessibility checks
-- tests, smoke checks, and Lighthouse results that ran
-- remaining constraints or fallbacks
+For implementation, report files, rationale, checks, measured results, gaps, and fallbacks. For an audit, report prioritized findings and recommendations without implying fixes.

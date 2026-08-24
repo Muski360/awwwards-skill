@@ -1,27 +1,63 @@
 # Awwwards Skill
 
-An art direction skill for AI coding agents that build distinctive, high-impact web experiences without generic visual SLOP.
+An [Agent Skill](https://agentskills.io/specification) for coding agents that art-direct distinctive brand-facing websites without generic visual SLOP.
 
-<img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
-
-## What This Is
-
-AI-generated interfaces repeat patterns: purple gradients, glass cards, oversized headlines, pill-shaped controls, floating 3D objects, and animation stacks with no connection to the brand.
-
-Awwwards Skill teaches an AI coding agent to detect those patterns, remove weak treatments, and build a visual system from the project’s content, audience, materials, and goals.
-
-The skill focuses on:
-
-- project-specific visual identity
-- editorial composition and typography
-- purposeful motion and interaction
-- responsive and accessible implementation
-- performance-aware effects, media, and 3D
-- evidence-based visual review
+The skill derives typography, composition, imagery, motion, and effects from project evidence. It keeps accessibility, responsive behavior, loading resilience, and performance inside the art-direction process.
 
 This project is independent and has no affiliation with Awwwards. It uses public Awwwards evaluation categories as a review lens and does not predict or guarantee awards.
 
-## Skill Structure
+## Install
+
+Keep the `awwwards-skill` folder intact and place it in a skill directory supported by your agent. The folder name must continue to match `name: awwwards-skill` in `SKILL.md`.
+
+| Environment | Skill directory |
+|---|---|
+| [Codex](https://learn.chatgpt.com/docs/build-skills) | Project `.agents/skills/awwwards-skill` or user `~/.agents/skills/awwwards-skill` |
+| [Claude Code](https://code.claude.com/docs/en/skills) | Project `.claude/skills/awwwards-skill` or personal `~/.claude/skills/awwwards-skill` |
+| [Gemini CLI](https://geminicli.com/docs/cli/using-agent-skills/) | `.gemini/skills/awwwards-skill` or `.agents/skills/awwwards-skill` |
+| [Cursor](https://cursor.com/docs/skills) | `.cursor/skills/awwwards-skill` or `.agents/skills/awwwards-skill` |
+| [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) | `.github/skills/awwwards-skill`, `.claude/skills/awwwards-skill`, or `.agents/skills/awwwards-skill` |
+| [Windsurf / Cascade](https://docs.windsurf.com/windsurf/cascade/skills) | `.windsurf/skills/awwwards-skill` or `.agents/skills/awwwards-skill` |
+| [Cline](https://docs.cline.bot/customization/skills) | `.cline/skills/awwwards-skill` or project `.claude/skills/awwwards-skill` |
+| [Roo Code](https://docs.roocode.com/features/skills) | `.roo/skills/awwwards-skill` or `.agents/skills/awwwards-skill` |
+
+Several agents recognize `.agents/skills`, so one checked-in copy can serve a mixed-tool team. Claude Code needs its `.claude/skills` path.
+
+For [claude.ai custom Skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills), upload the complete folder as a ZIP. Project Knowledge can act as a manual fallback, but it does not provide automatic skill discovery. In any environment without native Agent Skills support, supply `SKILL.md` as task instructions and keep `references/` available for the routing links.
+
+Do not duplicate the skill body into `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or editor rule files. Those files load under different rules and would create competing copies. `agents/openai.yaml` contains optional OpenAI/ChatGPT interface metadata; other clients can ignore it.
+
+## Invoke
+
+Codex:
+
+```text
+Use $awwwards-skill to redesign this landing page around a project-specific visual thesis.
+```
+
+Claude Code:
+
+```text
+/awwwards-skill audit this portfolio's art direction and do not edit files.
+```
+
+Automatic invocation also works when a request matches the skill description:
+
+```text
+Turn this conventional campaign site into a distinctive editorial experience, then verify the responsive and reduced-motion states.
+```
+
+## What the Skill Does
+
+- separates build, concept, narrow-change, and read-only audit modes
+- creates a compact direction brief from brand, content, audience, assets, and constraints
+- detects transferable visual treatments and reformulates them around project evidence
+- treats motion, WebGL, 3D, and heavy media as justified progressive enhancements
+- verifies the static core, accessibility, responsive behavior, failure states, and available project checks
+
+The skill rejects blind imitation of awarded websites. It extracts mechanisms such as pacing, crop, type scale, scene transitions, or interaction rhythm and rebuilds them from the current project.
+
+## Structure
 
 ```text
 awwwards-skill/
@@ -37,108 +73,15 @@ awwwards-skill/
 └── README.md
 ```
 
-`SKILL.md` contains the core workflow and mandatory rules. The reference files provide detailed guidance when the agent needs to make or review a specific design decision.
+`SKILL.md` owns mode selection, the direction brief, hard requirements, reference routing, and delivery. Each reference owns one conditional topic:
 
-## Quick Start
+- [`visual-identity.md`](references/visual-identity.md): derive a project-specific visual system
+- [`slop-patterns.md`](references/slop-patterns.md): diagnose generic treatments and choose reformulations
+- [`motion-and-implementation.md`](references/motion-and-implementation.md): choose and verify motion, media, WebGL, and 3D
+- [`evaluation-framework.md`](references/evaluation-framework.md): run evidence-based audits or compare iterations
+- [`examples.md`](references/examples.md): study reformulation patterns when a concept remains generic
 
-### Codex
-
-Copy the `awwwards-skill` folder into your Codex skills directory:
-
-```text
-$CODEX_HOME/skills/awwwards-skill
-```
-
-Invoke it in a request:
-
-```text
-Use $awwwards-skill to redesign this landing page around a distinct visual thesis.
-```
-
-### Claude
-
-Add the folder as a skill in a Claude environment that supports skills. For Claude Projects or environments without skill discovery, upload `SKILL.md` and the `references/` directory as project knowledge.
-
-The `agents/openai.yaml` file supplies Codex interface metadata. Claude and other agents can ignore it.
-
-### Other Agentic Systems
-
-Load `SKILL.md` as system or project instructions and keep the `references/` files available through the agent’s file or retrieval tools.
-
-The agent needs access to the target codebase. Browser automation, Lighthouse, GSAP, Framer Motion, Three.js, and React Three Fiber remain conditional capabilities, not required dependencies.
-
-## Example Prompts
-
-```text
-Use $awwwards-skill to turn this conventional portfolio into a distinct editorial experience.
-```
-
-```text
-Audit this landing page for visual SLOP, then reformulate every high-severity pattern.
-```
-
-```text
-Create a visual thesis, identity anchors, and motion grammar before changing the frontend.
-```
-
-```text
-Review this implementation for art direction, usability, accessibility, responsive behavior, and performance.
-```
-
-## What It Rejects
-
-The skill treats a fashionable visual device as SLOP when it lacks a relationship to the brand, content, or interaction.
-
-| SLOP pattern | Why it fails | Reformulation |
-|---|---|---|
-| Unmotivated gradient | Color fills empty space without brand evidence | Derive color from material, imagery, state, data, or a defined light source |
-| Missing visual identity | Safe typography and stock components fit unrelated brands | Define a visual thesis and two or three identity anchors |
-| Default card grid | Equal containers flatten hierarchy | Use editorial grouping, media, dividers, lists, or spatial hierarchy |
-| Glassmorphism by default | Blur decorates routine content | Use transparency only when layers or material logic require it |
-| Decorative 3D | Rendering cost adds spectacle without meaning | Model a product form, process, data relationship, or brand artifact |
-| Effect stack | Glow, grain, parallax, cursor effects, and marquees compete | Choose one signature motif and one supporting motion behavior |
-| Template typography | A giant neutral headline acts as the full concept | Build a type voice through width, rhythm, crop, spacing, and imagery |
-| Generic copy | Vague claims could describe any company | Name the product, audience, action, constraint, or result |
-
-See [`references/slop-patterns.md`](references/slop-patterns.md) for the full catalog.
-
-## Workflow
-
-1. Inspect the project, content, assets, stack, and constraints.
-2. Write a creative brief with a visual thesis, identity anchors, emotional target, content spine, interaction thesis, and technical budget.
-3. Build the typography, color, composition, imagery, material, and motion systems from project evidence.
-4. Compose the page around a clear narrative instead of a component inventory.
-5. Implement the semantic and responsive core before complex effects.
-6. Add motion or 3D only when it serves hierarchy, feedback, continuity, or product understanding.
-7. Run the SLOP audit and reformulate transferable treatments.
-8. Verify accessibility, responsive behavior, loading, performance, and project checks.
-
-## Reference Guides
-
-- [`visual-identity.md`](references/visual-identity.md): derive a visual system from brand and project evidence.
-- [`slop-patterns.md`](references/slop-patterns.md): identify generic visual treatments and reformulate them.
-- [`examples.md`](references/examples.md): study eight SLOP-to-distinctive transformations.
-- [`motion-and-implementation.md`](references/motion-and-implementation.md): choose CSS, GSAP, Framer Motion, Three.js, or React Three Fiber based on need.
-- [`evaluation-framework.md`](references/evaluation-framework.md): review design, usability, creativity, content, accessibility, and implementation quality.
-
-## Evaluation
-
-The review framework uses the categories displayed on official Awwwards site listings:
-
-| Criterion | Weight |
-|---|---:|
-| Design | 40% |
-| Usability | 30% |
-| Creativity | 20% |
-| Content | 10% |
-
-The skill adds identity, SLOP, accessibility, performance, and content gates. A broken core route or inaccessible interaction blocks the review even when the visual score looks strong.
-
-Use the weighted result to compare iterations of the same project. Do not present it as an official Awwwards score.
-
-## Design Principle
-
-A treatment earns its place when it reinforces a brand idea, improves hierarchy or interaction, and justifies its technical cost. Remove it when it does none of those jobs.
+Browser automation, Lighthouse, image generation, Motion for React, GSAP, Three.js, and React Three Fiber are conditional capabilities, not skill dependencies. When a tool is unavailable, the skill requires agents to report the gap instead of inventing verification.
 
 ## Author
 
@@ -146,4 +89,4 @@ A treatment earns its place when it reinforces a brand idea, improves hierarchy 
 
 ## Acknowledgements
 
-The concise repository structure, explicit pattern catalog, and transformation examples take inspiration from [Stop Slop](https://github.com/hardikpandya/stop-slop) by [Hardik Pandya](https://hvpandya.com).
+The compact structure, pattern catalog, and transformation examples take inspiration from [Stop Slop](https://github.com/hardikpandya/stop-slop) by [Hardik Pandya](https://hvpandya.com).

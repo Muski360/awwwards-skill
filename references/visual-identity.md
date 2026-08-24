@@ -1,72 +1,70 @@
 # Visual Identity and Art Direction
 
-Build a visual system from project evidence. Do not start from a fashionable effect.
+Build the visual system from project evidence. Treat the user's direction and a documented brand system as constraints, then use this guide to fill gaps.
 
-## Extract the Identity
+## Extract the Direction
 
-Collect signals from the brief, copy, product, audience, location, materials, history, and existing assets. Write:
-
-- **Brand premise:** the concrete idea the experience must communicate
-- **Emotional target:** the feeling the first screen should create
-- **Identity anchors:** two or three repeatable traits that make the work recognizable
-- **Signature motif:** one visual or interaction behavior tied to the premise
+Collect signals from the brief, copy, product, audience, location, materials, history, and existing assets. Populate the five brief fields defined in `SKILL.md`. Trace the thesis and anchors to evidence; fit the content, interaction, and technical choices to the audience and project constraints.
 
 Example:
 
-> Brand premise: A coastal architecture studio designs homes around wind and shade.
+> Visual thesis: A coastal architecture studio frames wind and shade as the materials that shape each home.
 >
-> Identity anchors: sun-cut geometry, mineral colors, long horizontal framing.
+> Identity anchors: sun-cut geometry, mineral colors, long horizontal crops.
 >
-> Signature motif: sections shift like sliding shade panels.
+> Content spine: climate premise, site response, built proof, studio method, inquiry.
+>
+> Interaction rule: sections shift like shade panels to reveal how each building responds to light.
+>
+> Technical budget: use the existing stack, responsive photography, CSS panel motion, and a static reduced-motion state.
+
+When evidence is sparse, derive a provisional direction from the product, audience, available copy, and assets. Label assumptions. Do not invent brand history, product facts, or proof.
 
 ## Build the System
 
 ### Typography
 
-- Assign a clear role to display, body, labels, and data text.
-- Use no more than two type families without a documented reason.
-- Create hierarchy through contrast in scale, width, weight, case, and spacing.
-- Avoid the default startup combination of neutral grotesk, oversized bold headline, and tiny uppercase labels.
-- Test real copy before tuning type. A system that works only with placeholder text has failed.
+- Assign clear roles to display, body, labels, and data text.
+- Start with one or two type families. Add another when a distinct content role earns it.
+- Create hierarchy through contrast in scale, width, weight, case, measure, and spacing.
+- Avoid the default startup combination of a neutral grotesk, oversized bold headline, and tiny uppercase labels unless project evidence supports it.
+- Test real copy. A system tuned to placeholder text has not passed.
 
 ### Color
 
-- Start with a controlled base and one meaningful accent.
-- Derive colors from brand evidence, product state, photography, or physical material.
-- Use contrast to establish hierarchy before adding saturation.
-- Reserve a gradient for modeled light, depth, state, data, or a repeatable brand behavior.
-- Remove gradients used only to make an empty background feel designed.
+- Define functional roles such as background, foreground, accent, state, and data before choosing a palette size.
+- Derive colors from brand evidence, product state, photography, place, or physical material.
+- Use contrast to establish hierarchy before adding saturation or effects.
+- Keep a gradient when it models light, depth, state, data, or a repeatable brand behavior. Remove one that fills compositional emptiness.
 
 ### Composition
 
-- Treat the first viewport as a poster with one dominant reading path.
+- Give each section one job and one dominant reading path.
+- For expressive marketing or editorial work, treat the first viewport as a poster that establishes premise and hierarchy.
 - Use scale, crop, whitespace, overlap, and alignment to create tension.
-- Give each section one primary idea. Change pacing through layout rather than a parade of components.
-- Break the grid at selected moments. A page with constant asymmetry loses the effect.
-- Keep mobile composition intentional. Recompose instead of stacking every desktop element.
+- Change pacing through composition instead of presenting a parade of components.
+- Break the grid at selected moments. Constant asymmetry removes contrast.
+- Recompose for mobile around the same thesis; do not stack every desktop element by reflex.
 
 ### Imagery
 
 - Use imagery as evidence, atmosphere, product explanation, or narrative.
 - Define a consistent crop, lighting, color, and subject-distance policy.
-- Prefer project-specific photography, illustration, type, or data over generic abstract renders.
-- Avoid images with embedded interface frames or visual clutter that competes with live content.
+- Prefer project-specific photography, illustration, type, or data to generic abstract renders.
+- Keep embedded text and interface frames legible, current, and free from conflicts with live content.
+- Reserve media dimensions and plan responsive sources so imagery does not destabilize the layout.
 
 ### Material and Detail
 
-- Choose one material logic such as paper, glass, ink, chrome, fabric, stone, or light.
-- Express it through a small set of properties: edge, texture, reflection, shadow, and motion.
-- Keep borders, radii, shadows, and blur consistent with that material.
-- Remove details that lack a connection to the material or brand premise.
+- Use a material metaphor when the project gives it meaning, then express it through a small family of edges, textures, reflections, shadows, or motion.
+- Keep borders, radii, shadows, and blur consistent with the chosen logic.
+- Remove details that have no relationship to the visual thesis or identity anchors.
+- A project can stay flat and typographic; do not invent a material layer to complete a checklist.
 
 ## Identity Stress Test
 
-Replace the logo and copy with content from an unrelated industry. If the design still feels correct, strengthen the identity anchors.
+Replace the logo and copy in a screenshot with an unrelated industry. Strengthen the identity anchors when the composition, type, color, imagery, and interaction still fit unchanged.
 
-Check whether a reviewer can name:
+Describe the first viewport without using the brand name. If the description names only a style trend, size, or effect, the direction needs more project evidence.
 
-- the visual thesis after five seconds
-- the dominant identity anchors after one viewport
-- the signature motif after one interaction
-
-Refine the system when those answers remain vague.
+Check that the mobile composition keeps the same thesis through its hierarchy and pacing, even when it uses a different arrangement or motion pattern.
