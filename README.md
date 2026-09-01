@@ -6,6 +6,8 @@ The skill derives typography, composition, imagery, motion, and effects from pro
 
 This project is independent and has no affiliation with Awwwards. It uses public Awwwards evaluation categories as a review lens and does not predict or guarantee awards.
 
+<img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
+
 ## Install
 
 Keep the `awwwards-skill` folder intact and place it in a skill directory supported by your agent. The folder name must continue to match `name: awwwards-skill` in `SKILL.md`.
@@ -82,6 +84,22 @@ awwwards-skill/
 - [`examples.md`](references/examples.md): study reformulation patterns when a concept remains generic
 
 Browser automation, Lighthouse, image generation, Motion for React, GSAP, Three.js, and React Three Fiber are conditional capabilities, not skill dependencies. When a tool is unavailable, the skill requires agents to report the gap instead of inventing verification.
+
+## Examples
+
+ - Before:
+ <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
+
+ - After:
+ <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
+
+
+ - Before:
+ <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
+
+ - After:
+ <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
+
 
 ## Author
 
