@@ -1,4 +1,4 @@
 interface:
   display_name: "Awwwards Art Direction"
   short_description: "Art-direct distinctive brand-facing websites"
-  default_prompt: "Use $awwwards-skill to art-direct this brand-facing frontend from its content and constraints, then implement and verify the result."
+  default_prompt: "Use $awwwards-skill to infer this brand-facing frontend's design intent, audit what to preserve, refine, simplify, remove, replace, or introduce, then implement and verify only the highest-value changes."

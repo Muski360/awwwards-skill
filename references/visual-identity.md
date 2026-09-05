@@ -1,10 +1,16 @@
 # Visual Identity and Art Direction
 
-Build the visual system from project evidence. Treat the user's direction and a documented brand system as constraints, then use this guide to fill gaps.
+Build the visual system from project evidence. Treat the user's direction and a documented brand system as constraints, then use this guide to fill gaps. First recognize the site's existing language; do not replace a deliberate minimalist, corporate, editorial, brutalist, luxury, playful, cinematic, or experimental direction with a preferred aesthetic.
+
+## Recognize the Existing Language
+
+Describe the current visual grammar before proposing a correction: type roles and rhythm, color and contrast, image treatment, spacing and density, component shapes, composition, material details, and interaction tone. Note what repeats, what is intentionally exceptional, and the evidence that ties it to the product and audience.
+
+Style labels can be useful shorthand, but they are not a preset or a score. A quiet interface may communicate clarity and trust; a maximal interface may communicate energy or cultural density. Ask of every recommendation: **does it strengthen the observed visual language and intended feeling for this audience?** If not, adapt or remove the recommendation.
 
 ## Extract the Direction
 
-Collect signals from the brief, copy, product, audience, location, materials, history, and existing assets. Populate the five brief fields defined in `SKILL.md`. Trace the thesis and anchors to evidence; fit the content, interaction, and technical choices to the audience and project constraints.
+Collect signals from the context profile, copy, product, audience, location, materials, history, and existing assets. Populate the relevant `SKILL.md` fields. Trace the thesis and anchors to evidence; fit the content, interaction, and technical choices to the audience and project constraints.
 
 Example:
 
@@ -18,7 +24,7 @@ Example:
 >
 > Technical budget: use the existing stack, responsive photography, CSS panel motion, and a static reduced-motion state.
 
-When evidence is sparse, derive a provisional direction from the product, audience, available copy, and assets. Label assumptions. Do not invent brand history, product facts, or proof.
+When evidence is sparse, derive a provisional direction from the product, audience, available copy, and assets. Label assumptions, preserve what is already coherent, and keep consequential changes reversible. Do not invent brand history, product facts, or proof.
 
 ## Build the System
 
@@ -63,7 +69,7 @@ When evidence is sparse, derive a provisional direction from the product, audien
 
 ## Identity Stress Test
 
-Replace the logo and copy in a screenshot with an unrelated industry. Strengthen the identity anchors when the composition, type, color, imagery, and interaction still fit unchanged.
+Replace the logo and copy in a screenshot with an unrelated industry. Strengthen the identity anchors when the composition, type, color, imagery, and interaction still fit unchanged **and** the transferability weakens the product's intended meaning. Transferability alone is not a failure: shared conventions can be appropriate for familiar tasks, regulated contexts, or a deliberately restrained brand.
 
 Describe the first viewport without using the brand name. If the description names only a style trend, size, or effect, the direction needs more project evidence.
 

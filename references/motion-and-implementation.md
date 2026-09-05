@@ -1,21 +1,61 @@
 # Motion and Implementation
 
-Create a motion system from the interaction rule. Reuse the project's working animation stack when it fits. Add a dependency after a required capability exceeds the existing stack.
+Treat motion, scrolling, cursors, and interaction code as a system to audit, not as automatic polish. Start with the current experience and the interaction rule. Reuse the project's working stack when it fits; add a dependency only after a demonstrated capability gap justifies it.
 
-## Choose the Tool
+## Audit Before Building
 
+Inventory consequential existing and proposed motion, scroll, cursor, and JavaScript behaviors. For each, choose **Keep/Preserve**, **Refine**, **Simplify**, **Replace**, **Reduce**, **Remove**, or **Introduce**. Test it against these questions:
+
+1. Does it serve a specific purpose?
+2. Does it improve comprehension, feedback, orientation, or interaction?
+3. Does it reinforce the visual identity or interaction model?
+4. Are its timing, travel, intensity, and repetition appropriate?
+5. Does it create friction, distraction, motion discomfort, input conflict, or performance cost?
+6. Would removal produce an equal or better experience?
+
+Do not preserve an animation merely because it exists. Static behavior or no added motion is a passing outcome. For an approved behavior, name the user moment, expected benefit, fallback, and validation path before implementation.
+
+### Scrolling Gate
+
+Native scrolling is the baseline, not an automatic failure of ambition. Consider smooth or inertial scrolling only when it creates a defined benefit that fits the interaction model, such as a coherent long-form narrative or a demonstrably better response to an existing problem. Do not use it to conceal weak composition or manufacture a premium feel.
+
+Before changing scroll behavior, test or plan for:
+
+- keyboard, touch, wheel, trackpad, text selection, focus navigation, skip links, and browser zoom;
+- anchors, history navigation, restoration, programmatic focus/scroll, nested scrollers, and route changes;
+- reduced-motion preference, an intelligible native fallback, and a way to escape any staged scene;
+- latency, frame cost, battery impact, and behavior on representative lower-power devices.
+
+Keep native scrolling when custom behavior is not materially better. A lightweight tool such as Lenis can be appropriate when it solves a demonstrated smooth-scroll or orchestration need more reliably than the current implementation, but it still must preserve expected browser behavior and have a justified lifecycle, fallback, and bundle cost.
+
+### Cursor Gate
+
+The system cursor is the baseline. Consider a custom cursor only as nonessential, fine-pointer feedback that makes a real interaction state or object relationship clearer and supports the visual language. It must not replace meaning with spectacle.
+
+- Keep normal affordances for links, controls, text selection, and form fields; never hide the pointer where the system cursor communicates a needed state.
+- Disable or avoid it for coarse pointers, keyboard-only use, unsupported devices, and contexts where it obscures content or causes lag.
+- Provide the same information through visible focus, hover-independent controls, and direct activation. Remove it when it merely trails, stretches, or decorates.
+
+## Choose the Implementation
+
+Compare the existing stack, native platform behavior, CSS or Web Animations API, focused custom code, and a lightweight established library. Choose the smallest option that materially improves user experience, reliability, maintainability, performance, or consistency. Do not hand-roll a complex behavior merely to avoid a dependency, and do not add a dependency merely because it is fashionable.
+
+- **Native platform:** default scrolling, semantic controls, focus, anchors, and browser navigation when they meet the need
 - **CSS:** state transitions, keyframes, simple reveals, and target-supported scroll-driven effects
 - **Web Animations API:** imperative DOM sequences without a framework dependency
 - **Motion for React:** React presence, layout transitions, gestures, and shared layout
 - **GSAP:** coordinated timelines, ScrollTrigger scenes, SVG choreography, and complex sequencing
+- **Lenis or another focused scroll utility:** justified smooth-scroll, inertia, or scroll-orchestration needs after the scrolling gate passes
 - **Three.js:** direct control of a WebGL or 3D scene
 - **React Three Fiber:** a React renderer for Three.js when React lifecycle and composition help the project
 
-For new React installs, the current Motion package uses `motion` and `motion/react`. Preserve an existing `framer-motion` installation unless the task includes migration. Do not add a motion or 3D library for an effect that CSS or the project's current dependency handles well.
+For vanilla JavaScript, inspect listeners, observers, timers, state ownership, cleanup, and failure paths before replacing or extending behavior. Prefer a focused library when it removes substantial bespoke synchronization, accessibility, browser-compatibility, or lifecycle risk; otherwise keep the native or lightweight custom implementation. For new React installs, the current Motion package uses `motion` and `motion/react`. Preserve an existing `framer-motion` installation unless the task includes migration. Do not add a motion or 3D library for an effect that CSS or the project's current dependency handles well.
+
+When choosing a new implementation, record the capability gap, alternatives considered, integration and teardown plan, fallback, dependency or bundle cost, and the evidence that will validate the choice.
 
 ## Define the Motion System
 
-Choose a small family of related behaviors. Two or three often suffice; this is a default, not a quota.
+For approved motion, choose a small family of related behaviors. Two or three often suffice; this is a default, not a quota.
 
 - **Entrance:** establish hierarchy in the first viewport
 - **Continuity:** connect sections, states, or narrative beats
@@ -28,7 +68,7 @@ Share timing, easing, direction, and travel across related behaviors. Vary them 
 
 - Start with visible, semantic DOM content. Apply hidden reveal states after enhancement initializes so failed scripts, hydration, observers, or assets cannot strand content offscreen or at zero opacity.
 - Animate transforms and opacity when they fit, then measure. Large composited layers, blur, filters, and careless `will-change` use can still cost memory and frame time.
-- Preserve native scroll and input. Defer nonessential visual work until it nears the viewport; keep essential application logic independent from observation.
+- Preserve expected browser scroll and input behavior unless an approved enhancement demonstrably improves it. Defer nonessential visual work until it nears the viewport; keep essential application logic independent from observation.
 - No information or action may exist only on hover. Provide focus and activation or tap paths where they apply.
 - Keep visual state, focusability, and the accessibility tree in sync. Hidden or exiting controls must leave focus navigation. Text splitting and cloned marquees must preserve reading order and accessible names, with true duplicates hidden from assistive technology.
 - For reduced motion, suppress or reformulate nonessential spatial, parallax, scroll-linked, and continuous motion. Preserve useful state feedback through direct changes or restrained fades. JavaScript and library logic should respond if the preference changes during a session.
@@ -66,14 +106,15 @@ For approved 3D:
 - Prevent fixed and sticky layers from covering focus, controls, or browser UI.
 - Test portrait, landscape, intermediate widths, text enlargement, and browser chrome changes.
 
-## Motion-Specific Verification
+## Motion, Scroll, and Cursor Verification
 
 After the core checks in `SKILL.md`:
 
 1. Test each enhanced interaction across the relevant input types and target engines. A viewport emulator is not a device test, and a WebKit engine run is not branded Safari.
 2. Check initial content visibility, focus and accessibility-tree state during transitions, reduced-motion behavior, persistent-motion controls, teardown on route or breakpoint changes, and fixed or sticky layer collisions.
-3. Exercise animation-asset failure plus WebGL support, context-loss, and DOM-fallback paths where applicable.
-4. Measure animation cost with available browser performance tools. Do not infer smoothness from the library or CSS properties alone.
+3. For changed scrolling, exercise keyboard, touch, wheel, trackpad, anchors, navigation history, focus-driven scroll, nested regions, restoration, and the native or reduced-motion fallback. For a custom cursor, check fine and coarse pointers, text and form interactions, latency, obscured content, and keyboard-visible equivalents.
+4. Exercise animation-asset failure plus WebGL support, context-loss, and DOM-fallback paths where applicable.
+5. Measure animation cost with available browser performance tools. Do not infer smoothness from the library or CSS properties alone.
 
 ## Primary References
 

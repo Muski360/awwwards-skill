@@ -1,8 +1,8 @@
 # Awwwards Skill
 
-An [Agent Skill](https://agentskills.io/specification) for coding agents that art-direct distinctive brand-facing websites without generic visual SLOP.
+An [Agent Skill](https://agentskills.io/specification) for coding agents that critically art-direct distinctive brand-facing websites without generic visual SLOP.
 
-The skill derives typography, composition, imagery, motion, and effects from project evidence. It keeps accessibility, responsive behavior, loading resilience, and performance inside the art-direction process.
+The skill starts by understanding design intent and auditing what to preserve, refine, simplify, remove, replace, or introduce. It derives typography, composition, imagery, motion, and effects from project evidence while keeping accessibility, responsive behavior, loading resilience, and performance inside the art-direction process.
 
 This project is independent and has no affiliation with Awwwards. It uses public Awwwards evaluation categories as a review lens and does not predict or guarantee awards.
 
@@ -52,10 +52,11 @@ Turn this conventional campaign site into a distinctive editorial experience, th
 ## What the Skill Does
 
 - separates build, concept, narrow-change, and read-only audit modes
-- creates a compact direction brief from brand, content, audience, assets, and constraints
-- detects transferable visual treatments and reformulates them around project evidence
-- treats motion, WebGL, 3D, and heavy media as justified progressive enhancements
-- verifies the static core, accessibility, responsive behavior, failure states, and available project checks
+- builds an evidence-backed context profile and baseline audit before substantial changes
+- protects strong decisions while classifying each material finding as preserve, refine, simplify, remove, replace, or introduce
+- seeks purposeful creative opportunities without forcing novelty or decorative complexity
+- audits copy, motion, scrolling, cursor behavior, implementation choices, and progressive enhancement
+- verifies the static core, accessibility, responsive behavior, failure states, available project checks, and the net value of changed work
 
 The skill rejects blind imitation of awarded websites. It extracts mechanisms such as pacing, crop, type scale, scene transitions, or interaction rhythm and rebuilds them from the current project.
 
@@ -67,6 +68,7 @@ awwwards-skill/
 ├── agents/
 │   └── openai.yaml
 ├── references/
+│   ├── critical-design-audit.md
 │   ├── evaluation-framework.md
 │   ├── examples.md
 │   ├── motion-and-implementation.md
@@ -75,12 +77,13 @@ awwwards-skill/
 └── README.md
 ```
 
-`SKILL.md` owns mode selection, the direction brief, hard requirements, reference routing, and delivery. Each reference owns one conditional topic:
+`SKILL.md` owns mode selection, the context profile, audit-first workflow, hard requirements, reference routing, and delivery. Each reference owns one conditional topic:
 
 - [`visual-identity.md`](references/visual-identity.md): derive a project-specific visual system
+- [`critical-design-audit.md`](references/critical-design-audit.md): establish intent, audit the full experience, control complexity, and assess creative opportunities
 - [`slop-patterns.md`](references/slop-patterns.md): diagnose generic treatments and choose reformulations
-- [`motion-and-implementation.md`](references/motion-and-implementation.md): choose and verify motion, media, WebGL, and 3D
-- [`evaluation-framework.md`](references/evaluation-framework.md): run evidence-based audits or compare iterations
+- [`motion-and-implementation.md`](references/motion-and-implementation.md): audit and implement motion, scrolling, cursors, media, WebGL, and 3D
+- [`evaluation-framework.md`](references/evaluation-framework.md): run evidence-based audits, compare iterations, and assess net change
 - [`examples.md`](references/examples.md): study reformulation patterns when a concept remains generic
 
 Browser automation, Lighthouse, image generation, Motion for React, GSAP, Three.js, and React Three Fiber are conditional capabilities, not skill dependencies. When a tool is unavailable, the skill requires agents to report the gap instead of inventing verification.

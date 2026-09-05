@@ -1,6 +1,6 @@
 # Evaluation Framework
 
-Use this framework for visual audits, concept comparisons, and requested scoring. Default to an evidence-backed qualitative review. Do not predict an award or present this review as an official Awwwards score.
+Use this framework for visual audits, concept comparisons, and requested scoring. First follow the baseline process in [critical design audit](critical-design-audit.md), then use this framework to evaluate the result. Default to an evidence-backed qualitative review. Do not predict an award or present this review as an official Awwwards score.
 
 ## Awwwards-Informed Lens
 
@@ -34,11 +34,12 @@ Block the review when a core route or task fails, a core control is inaccessible
 
 ## Review Method
 
-1. State the inferred direction brief and the evidence that supports it.
-2. Run the hard gates before discussing polish.
-3. Review each criterion with a concrete strength, weakness, and highest-value change.
-4. Prioritize the change that improves the weakest high-weight criterion without breaking a gate or erasing identity.
-5. If the user asks to compare iterations of the same project and matched rendered evidence exists, score each criterion from 1 to 10 and apply the weights. Match content, viewport, state, and capture conditions; include equivalent interaction states when they affect the comparison.
+1. State the inferred context profile and the evidence that supports it, including the observed visual language and intended feeling.
+2. Run the hard gates before discussing polish. Identify strengths that should be preserved as well as failures.
+3. Review each criterion with a concrete strength, risk or opportunity, disposition (preserve, refine, simplify, remove, replace, or introduce), and highest-value outcome.
+4. Prioritize the change that improves the weakest high-weight criterion without breaking a gate, erasing identity, or adding unjustified complexity.
+5. For implementation work, re-check whether new copy, components, treatments, and interactions improved the stated user or brand outcome more than simpler alternatives.
+6. If the user asks to compare iterations of the same project and matched rendered evidence exists, score each criterion from 1 to 10 and apply the weights. Match content, viewport, state, and capture conditions; include equivalent interaction states when they affect the comparison.
 
 For optional numeric scoring, use these anchors:
 
@@ -47,6 +48,17 @@ For optional numeric scoring, use these anchors:
 - **10:** the evidence shows an exceptional, coherent result with no material weakness in that criterion
 
 Use weighted scores only to compare iterations of the same project. For a single site or unrelated projects, give qualitative criterion assessments without a composite number. Do not rank unrelated brands through one aesthetic standard or imply precision that the evidence cannot support.
+
+## Net Change Check
+
+After an authorized implementation, compare the changed experience with the baseline rather than rewarding visible novelty. Confirm that the work:
+
+- preserved the strongest identity, content, and usability decisions;
+- made a demonstrated improvement to a user, hierarchy, interaction, or brand outcome;
+- did not add duplicate information, decorative density, verbose copy, or unneeded motion; and
+- retained resilient, accessible, responsive, and performant paths.
+
+When the evidence does not show a net improvement, recommend refinement, simplification, or removal instead of treating added polish as progress.
 
 ## Primary References
 
