@@ -1,123 +1,84 @@
 ---
 name: awwwards-skill
-description: Art-direct, build, redesign, or critically audit distinctive brand, campaign, portfolio, and experimental websites. Use when an evidence-led visual and interaction direction matters; skip routine UI and non-visual fixes.
+description: Art-direct, build, redesign, or audit visually ambitious websites where project-specific identity and interaction matter, including brands, products, portfolios, campaigns, and editorial experiences. Use for substantial visual direction or transformation; skip routine UI maintenance and non-visual fixes.
 ---
 
 # Awwwards Skill
 
-Act as a critical design director and interaction auditor, not a generic polish engine. Understand the product and the design intent before changing the interface. Minimal, corporate, editorial, brutalist, luxury, cinematic, playful, and experimental systems can all be deliberate; do not impose a house style.
+Create a memorable experience grounded in the project's content, audience, and identity. Cinematic, editorial, spatial, kinetic, playful, brutalist, minimal, luxury, and restrained work can all be right. Do not impose an "Awwwards aesthetic" or copy a reference site's design.
 
-Preserve user scope, requirements, facts, and stack. User direction and documented brand rules outrank this skill's defaults. Extract useful mechanisms from awarded sites, never their art direction. Treat fashion-led choices as SLOP only when they serve no identity, hierarchy, interaction, or meaning.
+User and project instructions, including a requested new direction, outrank this skill's defaults. Preserve scope, verified facts, documented brand constraints, and the working stack. Accessibility and performance are part of art direction.
 
 ## Choose the Mode
 
-- **Build or redesign:** Understand the existing experience, plan from an audit, implement, then re-audit.
-- **Concept or art direction:** Establish the context, direction, and opportunities without changing code unless the user asks.
-- **Audit or review:** Stay read-only unless the user asks for fixes. Report evidence, severity, and a concrete reformulation.
-- **Narrow visual change:** Fit the existing system. Use only the relevant parts of the audit; do not expand the request into a redesign.
+- **Build or redesign:** inspect, art-direct, implement, and verify.
+- **Concept:** develop the direction and its feasibility; change code only when requested.
+- **Audit:** report evidence and recommendations; stay read-only unless fixes are authorized.
+- **Narrow change:** fit the existing system and inspect the affected concern without expanding scope.
 
-## Reference Routing
+## Load Guidance When Needed
 
-Read only the references that match the work. Resolve paths relative to this file.
+Resolve links from the installed skill folder containing this `SKILL.md`, regardless of the project's working directory. Read the relevant guide at the point of decision; do not load the whole collection.
 
-- For a substantial build, redesign, concept, or visual audit, first read the [critical design audit](references/critical-design-audit.md).
-- For a build, redesign, or art-direction concept, also read [visual identity](references/visual-identity.md) and the [SLOP catalog](references/slop-patterns.md).
-- For a visual audit, comparison, or requested score, also read the [SLOP catalog](references/slop-patterns.md) and [evaluation framework](references/evaluation-framework.md). Read the visual-identity guide when the direction is unclear or a new direction is proposed.
-- For consequential existing or proposed animation, scrolling, cursor behavior, WebGL, 3D, heavy media, or JavaScript interaction work, read [motion and implementation](references/motion-and-implementation.md).
-- For a narrow visual change, follow the existing system and read only the guide covering the changed concern. Skip references when the user fully specified the choice.
-- When a concept remains generic after examining project evidence, read the [reformulation examples](references/examples.md).
+| Need | Reference |
+| --- | --- |
+| Establish or change direction; inspect assets, screenshots, recordings, or sites | [Visual identity](references/visual-identity.md) |
+| Audit an existing experience or plan a substantial redesign | [Critical design audit](references/critical-design-audit.md) |
+| Diagnose generic treatments or a direction that lacks identity | [SLOP patterns](references/slop-patterns.md) |
+| Audit or implement consequential motion, transitions, scrolling, cursors, video, WebGL, or 3D | [Motion and implementation](references/motion-and-implementation.md) |
+| Evaluate a finished experience, compare iterations, or provide requested scores | [Evaluation framework](references/evaluation-framework.md) |
+| Find a stronger mechanism when a concept remains generic | [Reformulation examples](references/examples.md) |
 
-## Context Profile
+## Establish Context
 
-Before substantial visual or interaction work, establish a compact, evidence-backed profile. One line per field is enough:
+Before substantial work, inspect the codebase, routes, components, real copy, assets, brand rules, and supplied visual references. Use available visual tools to inspect media itself. Separate observed facts, inference, and unknowns; ask only when a missing answer would materially change the result.
 
-- **Product and user job:** What the site helps someone understand, decide, or do.
-- **Audience and context:** Who is using it, in which setting, with what level of attention or trust.
-- **Brand personality and intended feeling:** The tone to preserve and the response the experience should create.
-- **Observed visual language:** Its current style, recurring rules, intentional exceptions, and supporting evidence.
-- **Visual thesis:** Connect a project truth and intended feeling to a visual approach.
-- **Content spine:** The audience's reading, task, or decision path.
-- **Identity anchors:** Two or three repeatable type, color, image, material, or composition traits.
-- **Interaction model:** Primary inputs, expected feedback, and what motion or input adds; `none` is valid.
-- **Technical constraints:** Stack, browser/device targets, asset or rendering budget, fallbacks, and unknowns.
+Keep a compact working profile, proportional to the task:
 
-Separate observed facts from inference. Label uncertainty and keep major changes reversible when evidence is sparse.
+- **Product and user job:** purpose, goals, and primary action.
+- **Audience and context:** attention, trust, devices, and inputs.
+- **Brand and feeling:** intended response, must-keep and must-avoid choices.
+- **Observed language:** recurring type, layout, imagery, material, and motion.
+- **Visual thesis:** a project truth connected to a visual approach.
+- **Content spine:** the reading, narrative, or decision path.
+- **Identity anchors:** recurring choices that make the project recognizable.
+- **Interaction model:** inputs, feedback, and what movement contributes.
+- **Constraints:** stack, browsers, assets and rights, delivery, performance, and unknowns.
 
-## Audit Before Changing
+Inspect and use strong real material before sourcing or generating replacements. Do not invent brand history, clients, awards, metrics, testimonials, product behavior, or claims. Label permitted placeholders.
 
-For a substantial change to an existing experience, do not style or edit before making an evidence-backed baseline audit. For a greenfield build, audit the available product evidence, content, assets, requirements, and technical constraints before defining the static core. Gather rendered desktop and mobile evidence when tools permit; otherwise inspect source and assets and label visual or runtime conclusions as unverified.
+## Build and Redesign
 
-Identify what already succeeds. For each material finding, current treatment, or candidate addition, choose one disposition:
+1. Establish the context and baseline. For an existing site, capture relevant routes and states, including desktop and mobile when tools permit. For a new site, assess the brief, content, assets, and feasibility. Protect successful decisions.
+2. Classify material findings as **preserve**, **refine**, **simplify**, **remove**, **replace**, or **introduce**. Resolve broken tasks, accessibility, content integrity, and loading failures first; choose remaining work by expected project value and risk.
+3. Run the signature experience pass below. Make a focused plan connecting composition, typography, media, and behavior. Keep working notes brief; proceed with authorized edits.
+4. Build a semantic, responsive, visible core. Prototype uncertain signature mechanics early enough to change direction, with readable content and useful actions available throughout.
+5. Integrate the chosen interactions with the lightest reliable implementation. Compare native capabilities, the existing stack, and established libraries; choose by capability, lifecycle, cost, and maintainability.
+6. Inspect the rendered result, challenge your own changes, and refine until it shows a net improvement. A successful build alone does not establish visual quality.
 
-- **Preserve:** effective and aligned; protect it from collateral change.
-- **Refine:** sound idea with a weak execution detail.
-- **Simplify:** useful core obscured by excess information, treatment, or interaction.
-- **Remove:** actively harms hierarchy, usability, credibility, or the intended language.
-- **Replace:** concept or implementation is inferior to a clearer alternative.
-- **Introduce:** a missing opportunity has a specific, defensible benefit.
+## Signature Experience Pass
 
-Audit visual identity, hierarchy, typography, spacing, color, layout, density, copy, component consistency, interactions, motion, scrolling, cursor behavior, responsiveness, accessibility, performance, resilience, and JavaScript implementation. A category with no justified change passes; do not manufacture findings.
+For visually led work, actively investigate what could make this specific experience memorable. Give the opening viewport particular attention for brand, person, product, venue, campaign, portfolio, entertainment, and story-led projects.
 
-Address hard gates first. Among viable changes, prioritize visual identity, user experience, hierarchy and clarity, interaction quality, perceived polish, accessibility, performance, then implementation quality. Do not spend effort on low-impact polish while a more consequential finding remains.
+Consider expressive type or kinetic lettering, photography or video, spatial composition, depth or 3D, page and section transitions, scroll choreography, cursor response, micro-interactions, unconventional navigation, mobile recomposition, and loading or transitional moments. These are opportunities, not required ingredients.
 
-## Workflow
+Describe a credible candidate through its project connection, composition or behavior, pacing, expected benefit, technical cost, and mobile/reduced-motion/failure alternative. Compare it with stronger static art direction and no addition. Atmosphere, delight, and a demonstration of craft can justify investment alongside explanation and task utility.
 
-### Build or Redesign
+Ask: **What will someone remember five minutes later?** If the answer is unconvincing, explore a project-specific signature moment. Keep an intentionally quiet experience when it is stronger. Prefer the simpler implementation when the experience is equivalent; do not mistake minimum effects for maximum quality.
 
-1. Inspect the stack, routes, components, content, assets, brand cues, browser targets, and performance constraints.
-2. Establish the context profile and baseline audit. Preserve strong decisions explicitly before proposing new ones.
-3. Make a focused change plan. Scan for one or more purposeful creative opportunities, compare them with simpler fixes and no addition, and retain only the options that earn their cost.
-4. Implement a semantic, responsive, visible static core before nonessential motion, WebGL, or other enhancement. Keep copy concise and faithful to the product's voice and facts.
-5. Add or alter interactions with the lightest capable implementation that passes the relevant motion, scrolling, cursor, and dependency gates.
-6. Re-run the relevant audit with rendered evidence. Keep only changes that strengthen the intended experience without creating hierarchy, complexity, accessibility, performance, or reliability debt.
+## Non-Negotiable Quality
 
-### Concept or Art Direction
+- Preserve semantic content, accessible names and states, logical focus, visible focus, contrast, readable reflow, and usable controls.
+- Keep essential information and actions available without hover, animation, WebGL, or a fine pointer. Respect reduced motion and retain useful feedback.
+- Make enhancement failure recoverable. Core content must survive failed fonts, media, scripts, hydration, and observers.
+- Preserve expected scrolling and navigation. Custom scrolling, cursors, and navigation must earn their cost and support relevant inputs without trapping users.
+- Recompose mobile and intermediate layouts around the same identity; finish the whole experience, including secondary routes and relevant loading, empty, offline, error, and 404 states. Use the [audit guide](references/critical-design-audit.md) to decide when exceptional states deserve a signature treatment.
+- Never claim checks or measured results that did not occur.
 
-Establish the context profile, note assumptions, and audit any supplied experience before proposing a visual direction. Present the strongest preservation decisions, the highest-impact refinements, and only creative additions that pass the opportunity gate. Do not imply implementation or verification that did not occur.
+## Verify and Deliver
 
-### Audit or Review
+Run relevant repository checks. Inspect changed routes and states at narrow, intermediate, and wide widths; exercise keyboard, touch, zoom/reflow, reduced motion, loading failure, console errors, and target browsers where tools permit. Use production-equivalent performance measurements when consequential media or interaction work warrants them.
 
-1. Gather desktop, mobile, interaction, and source evidence within available tools; state evidence gaps.
-2. Reconstruct the context profile and baseline audit. Protect strong choices as well as identifying weaknesses.
-3. Classify and prioritize findings with evidence, impact, and a project-specific reformulation. Change files only when the user requested implementation, then rerun the relevant checks and audit.
+Compare against the baseline: did identity, hierarchy, content, interaction, responsive composition, and finish improve together? Identify the weakest changed moment. Question generic substitution, competing effects, awkward crops, repetitive layouts, and unnecessary complexity; revise clear failures before delivery.
 
-## Meaning, Complexity, and Opportunity Gates
-
-Before adding, retaining, or approving a noticeable treatment, ask:
-
-1. What user, content, brand, hierarchy, affordance, feedback, or narrative outcome does it improve?
-2. Does it strengthen the observed visual language and intended feeling rather than merely look contemporary?
-3. Does it duplicate information, compete for attention, or create a less clear alternative to a simpler solution?
-4. What accessibility, loading, rendering, motion, maintenance, and fallback cost does it add?
-
-Prefer the simpler option when the experience is equivalent. Do not reject a deliberate existing convention only because it is conventional or transferable; question it when its value cannot be defended in this product.
-
-After the baseline audit, look beyond defects for a purposeful creative opportunity: a meaningful micro-interaction, transition, visual story, layout move, or interaction pattern that improves a real moment. Introduce it only when its benefit is concrete, project-specific, and greater than a simpler fix or no addition. `None` is a valid outcome.
-
-## Hard Requirements
-
-- Use verified facts. Do not invent clients, awards, logos, metrics, testimonials, capabilities, or research. Mark permitted placeholders.
-- Preserve semantic HTML, accessible names, roles, and states, logical focus order, visible focus, contrast, readable content, and usable targets.
-- Keep content and controls operable without animation, hover, WebGL, or a fine pointer. Respect reduced-motion preferences without removing necessary state feedback.
-- Keep core content visible if fonts, media, scripts, hydration, observers, or enhancement libraries fail.
-- Default to native scrolling and the system cursor. Override either only after a demonstrated benefit survives input, accessibility, performance, and fallback checks. Never trap navigation to stage an effect.
-- Do not claim browser, accessibility, performance, or Lighthouse checks that did not run.
-
-## Design and Implementation Defaults
-
-- Work from the observed visual language, not a preset. Every recommendation should strengthen the site's intended tone, audience fit, and emotional response.
-- Build distinction through a small family of recurring, meaningful choices rather than an effect stack.
-- Match grouping and composition to the content and task. Use editorial rhythm, media, lists, tables, whitespace, grids, or cards where each clarifies the reading path; do not use any as a default aesthetic.
-- Create a type voice through role, scale, width, measure, spacing, and alignment. A giant heading does not supply identity on its own.
-- Make interface copy natural, concise, scannable, and appropriate to the brand. Preserve meaning and hierarchy when shortening it; do not replace facts with marketing filler.
-- Tie gradients, texture, glass, unusual cursors, marquees, motion, and 3D to the context profile. Weak motivation creates SLOP, not the ingredient itself.
-- Compare the existing stack, native platform features, CSS or Web Animations API, custom code, and a lightweight established library before building an interaction. Add a dependency only for a meaningful gain in experience, reliability, maintainability, performance, or consistency.
-- Recompose for small screens and intermediate widths; do not merely scale down a desktop arrangement.
-
-## Verification and Delivery
-
-Run applicable project lint, type, test, and build checks. With browser tools, inspect narrow, intermediate, laptop, and wide layouts in declared targets; test keyboard and focus behavior, reduced motion, touch, zoom/reflow, overflow, loading failure, console errors, and failed requests. Use Lighthouse on a production-equivalent build when performance work warrants it, and report its configuration as lab evidence.
-
-After implementation, repeat the relevant audit and verify that preserved strengths remain intact, introduced complexity earned its place, and the changed experience better matches the context profile. Name unavailable tools, target browsers, and unverified checks.
-
-For implementation, report files, rationale, the highest-impact dispositions, checks, measured results, gaps, and fallbacks. For an audit, report prioritized findings and recommendations without implying fixes.
+Report the outcome, important preservation/change decisions, files, checks and measurements, fallbacks, and remaining gaps. Scale the format to the task. For audits, prioritize findings with evidence, impact, and a concrete reformulation. If evidence or tools are missing, state the limitation and continue useful work within scope.

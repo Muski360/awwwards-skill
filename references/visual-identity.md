@@ -1,76 +1,59 @@
 # Visual Identity and Art Direction
 
-Build the visual system from project evidence. Treat the user's direction and a documented brand system as constraints, then use this guide to fill gaps. First recognize the site's existing language; do not replace a deliberate minimalist, corporate, editorial, brutalist, luxury, playful, cinematic, or experimental direction with a preferred aesthetic.
+Use when establishing or changing a direction, or interpreting supplied assets and references. Develop the context profile in [SKILL.md](../SKILL.md). Recognize the existing language and distinguish intentional decisions from accidental defaults; a requested redesign may change that language.
 
-## Recognize the Existing Language
+## Inspect the Material
 
-Describe the current visual grammar before proposing a correction: type roles and rhythm, color and contrast, image treatment, spacing and density, component shapes, composition, material details, and interaction tone. Note what repeats, what is intentionally exceptional, and the evidence that ties it to the product and audience.
+Inventory relevant copy, logos, brand guidelines, fonts and usage rights, photographs, product images, illustrations, icons, video, 3D models, and textures. Open promising files. For media, inspect subject, focal point, crop latitude, resolution, aspect ratio, transparency, duration, and quality as applicable. For fonts, check available weights, language coverage, loading, and licensing information.
 
-Style labels can be useful shorthand, but they are not a preset or a score. A quiet interface may communicate clarity and trust; a maximal interface may communicate energy or cultural density. Ask of every recommendation: **does it strengthen the observed visual language and intended feeling for this audience?** If not, adapt or remove the recommendation.
+Identify the strongest material and build around it. Keep factual and decorative assets distinct: a generated image cannot stand in for a real product, customer, or outcome. Source or generate a missing asset only when it serves a defined role and permitted tools and rights allow it. Carry a purposeful interim composition if an essential asset remains unavailable; name the gap.
 
-## Extract the Direction
+## Read Screenshots, Recordings, and References
 
-Collect signals from the context profile, copy, product, audience, location, materials, history, and existing assets. Populate the relevant `SKILL.md` fields. Trace the thesis and anchors to evidence; fit the content, interaction, and technical choices to the audience and project constraints.
+Use the supplied artifact as evidence. A contextual URL does not replace an attached screenshot or recording. When useful and available, inspect a live reference to answer behavior questions, keeping observed and inferred behavior separate.
 
-Example:
+- **Screenshot:** read the first viewport, grid, spatial balance, type roles, line breaks, hierarchy, image treatment, depth cues, and focal competition. A visible cursor shape cannot establish cursor behavior; a still image cannot prove motion, loading speed, or implementation.
+- **Recording:** inspect the whole clip for sequence, then sample the start, change, peak, settle, and exit of relevant moments. Use timestamped frames, denser sampling, or replay around fast changes. Study trigger, duration, acceleration/deceleration, overlap, rest, reversibility, and which elements stay stable. Do not infer an exact easing curve, library, or shader from appearance.
+- **Moodboard or collection:** extract recurring relationships and purposeful differences. Separate required brand choices from aspirational references; reconcile conflicting examples through the project's audience and goals.
 
-> Visual thesis: A coastal architecture studio frames wind and shade as the materials that shape each home.
+For each useful reference, keep a short note: observed mechanism and evidence location; hierarchy and rhythm; why it fits its context; likely implementation and performance costs (label estimates); and a reinterpretation using this project's own material. Record what the artifact cannot establish. Perceived smoothness in a capture is not measured runtime performance.
+
+Extract mechanisms such as a stable task area beside active imagery, a portrait becoming a narrative frame, or consistent media framing across routes. Rebuild them around the project. Do not import another site's palette, signature typeface, subject, and composition as a package.
+
+## Turn Evidence Into Direction
+
+Connect a project truth to a visual thesis, recurring identity anchors, and a content spine. Keep assumptions reversible when evidence is thin.
+
+Illustrative excerpt from a larger context profile:
+
+> **Visual thesis:** A coastal architecture studio shows how wind and shade shape its homes.
 >
-> Identity anchors: sun-cut geometry, mineral colors, long horizontal crops.
+> **Identity anchors:** sun-cut geometry, mineral colors, long horizontal crops.
 >
-> Content spine: climate premise, site response, built proof, studio method, inquiry.
+> **Content spine:** climate premise, site response, built proof, studio method, inquiry.
 >
-> Interaction rule: sections shift like shade panels to reveal how each building responds to light.
+> **Interaction model:** panels reveal how each building responds to light.
 >
-> Technical budget: use the existing stack, responsive photography, CSS panel motion, and a static reduced-motion state.
+> **Constraints:** existing stack, supplied photography, CSS motion, static reduced-motion composition.
 
-When evidence is sparse, derive a provisional direction from the product, audience, available copy, and assets. Label assumptions, preserve what is already coherent, and keep consequential changes reversible. Do not invent brand history, product facts, or proof.
+This is a reasoning example, not a theme. Derive the actual project direction from its own evidence.
 
-## Build the System
+## Compose a Coherent System
 
-### Typography
+| Medium | Art-direction decisions |
+| --- | --- |
+| Typography | Display, body, label, and data roles; family, width, weight, measure, spacing, line breaks, and expressive contrast. Test real copy, fallback fonts, long strings, and zoom. Scale alone is not a concept. |
+| Color and material | Functional contrast and state roles; palette drawn from brand, subject, place, or media. Texture, reflection, glass, or gradients should belong to that language. |
+| Layout | Dominant reading path, grid, density, whitespace, overlap, crop, and deliberate changes in rhythm. Give the opening premise, identity, intrigue, and a useful action without burying comprehension. |
+| Photography and illustration | Subject, distance, lighting, crop, color, and sequence. Let strong media determine proportions and section structure; avoid squeezing it into interchangeable containers. |
+| Video and 3D | Viewpoint, framing, poster, spatial meaning or atmosphere, entry/exit, and relationship to live type. Choose whether time or manipulation adds enough value over a still. |
+| Motion and interaction | A shared grammar of timing, direction, transformation, and response. Protect a stable reading/task layer when another layer moves. See [motion and implementation](motion-and-implementation.md). |
+| Responsive composition | Preserve premise and identity through new crops, type breaks, order, density, and input behavior. Design intermediate widths and mobile as compositions in their own right. |
 
-- Assign clear roles to display, body, labels, and data text.
-- Start with one or two type families. Add another when a distinct content role earns it.
-- Create hierarchy through contrast in scale, width, weight, case, measure, and spacing.
-- Avoid the default startup combination of a neutral grotesk, oversized bold headline, and tiny uppercase labels unless project evidence supports it.
-- Test real copy. A system tuned to placeholder text has not passed.
+## Stress-Test the Direction
 
-### Color
+Describe the first viewport without the brand name. It should reveal something more specific than a trend or an effect. Use the signature experience pass to strengthen a weak opening.
 
-- Define functional roles such as background, foreground, accent, state, and data before choosing a palette size.
-- Derive colors from brand evidence, product state, photography, place, or physical material.
-- Use contrast to establish hierarchy before adding saturation or effects.
-- Keep a gradient when it models light, depth, state, data, or a repeatable brand behavior. Remove one that fills compositional emptiness.
+Imagine substituting an unrelated brand. Transferability is a diagnostic signal when it weakens the project's intended meaning; familiar task conventions and deliberate restraint can remain. Judge proposed work by project fit, coherence, and what visitors will understand or remember.
 
-### Composition
-
-- Give each section one job and one dominant reading path.
-- For expressive marketing or editorial work, treat the first viewport as a poster that establishes premise and hierarchy.
-- Use scale, crop, whitespace, overlap, and alignment to create tension.
-- Change pacing through composition instead of presenting a parade of components.
-- Break the grid at selected moments. Constant asymmetry removes contrast.
-- Recompose for mobile around the same thesis; do not stack every desktop element by reflex.
-
-### Imagery
-
-- Use imagery as evidence, atmosphere, product explanation, or narrative.
-- Define a consistent crop, lighting, color, and subject-distance policy.
-- Prefer project-specific photography, illustration, type, or data to generic abstract renders.
-- Keep embedded text and interface frames legible, current, and free from conflicts with live content.
-- Reserve media dimensions and plan responsive sources so imagery does not destabilize the layout.
-
-### Material and Detail
-
-- Use a material metaphor when the project gives it meaning, then express it through a small family of edges, textures, reflections, shadows, or motion.
-- Keep borders, radii, shadows, and blur consistent with the chosen logic.
-- Remove details that have no relationship to the visual thesis or identity anchors.
-- A project can stay flat and typographic; do not invent a material layer to complete a checklist.
-
-## Identity Stress Test
-
-Replace the logo and copy in a screenshot with an unrelated industry. Strengthen the identity anchors when the composition, type, color, imagery, and interaction still fit unchanged **and** the transferability weakens the product's intended meaning. Transferability alone is not a failure: shared conventions can be appropriate for familiar tasks, regulated contexts, or a deliberately restrained brand.
-
-Describe the first viewport without using the brand name. If the description names only a style trend, size, or effect, the direction needs more project evidence.
-
-Check that the mobile composition keeps the same thesis through its hierarchy and pacing, even when it uses a different arrangement or motion pattern.
+Check the whole sequence: typography, media, motion, secondary routes, exceptional states, and mobile should feel authored together. Fix an isolated showpiece that leaves the rest of the experience generic.
