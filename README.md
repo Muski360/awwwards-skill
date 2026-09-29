@@ -33,6 +33,8 @@ Results improve substantially when you supply real copy, brand assets, fonts and
 
 Explain what interests you in a reference: its pacing, type, framing, transitions, or interaction. The skill inspects that material and reinterprets its mechanisms through your project's identity. It preserves strong existing work and labels missing evidence.
 
+When useful, it researches additional sites, experiments, libraries, and open-source interactions before choosing a direction. Curated references provide starting points for learning mechanisms and assessing implementation; they are not fixed recipes or default dependencies.
+
 ## Invoke
 
 In Codex, use `$awwwards-skill`. In Claude Code, use `/awwwards-skill`. Clients that support automatic selection can match a request to the skill description.
@@ -66,6 +68,7 @@ Use $awwwards-skill to build a memorable portfolio from these portraits, films, 
 [SKILL.md](SKILL.md) handles scope, context, the signature pass, implementation, and verification. Specialist guidance loads when needed:
 
 - [Visual identity](references/visual-identity.md): assets, reference analysis, and art direction.
+- [External references](references/external-references.md): selective research, seven starting points, adaptation, and technical source review.
 - [Critical design audit](references/critical-design-audit.md): preservation, changes, and exceptional states.
 - [SLOP patterns](references/slop-patterns.md): diagnose generic treatments.
 - [Motion and implementation](references/motion-and-implementation.md): native APIs, libraries, input, media, and lifecycle.

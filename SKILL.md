@@ -23,6 +23,7 @@ Resolve links from the installed skill folder containing this `SKILL.md`, regard
 | Need | Reference |
 | --- | --- |
 | Establish or change direction; inspect assets, screenshots, recordings, or sites | [Visual identity](references/visual-identity.md) |
+| Expand the visual or interaction repertoire; research external mechanisms and implementation | [External references](references/external-references.md) |
 | Audit an existing experience or plan a substantial redesign | [Critical design audit](references/critical-design-audit.md) |
 | Diagnose generic treatments or a direction that lacks identity | [SLOP patterns](references/slop-patterns.md) |
 | Audit or implement consequential motion, transitions, scrolling, cursors, video, WebGL, or 3D | [Motion and implementation](references/motion-and-implementation.md) |
@@ -61,6 +62,8 @@ Inspect and use strong real material before sourcing or generating replacements.
 For visually led work, actively investigate what could make this specific experience memorable. Give the opening viewport particular attention for brand, person, product, venue, campaign, portfolio, entertainment, and story-led projects.
 
 Consider expressive type or kinetic lettering, photography or video, spatial composition, depth or 3D, page and section transitions, scroll choreography, cursor response, micro-interactions, unconventional navigation, mobile recomposition, and loading or transitional moments. These are opportunities, not required ingredients.
+
+Before settling on a direction, use [external reference research](references/external-references.md) when stronger visual vocabulary, unfamiliar behavior, or implementation uncertainty could change the choice. Study relevant supplied sources and seek additional high-quality work where useful. Extract mechanisms and relationships; adapt them to the project without copying a reference's visual language or treating a demo as production-ready code.
 
 Describe a credible candidate through its project connection, composition or behavior, pacing, expected benefit, technical cost, and mobile/reduced-motion/failure alternative. Compare it with stronger static art direction and no addition. Atmosphere, delight, and a demonstration of craft can justify investment alongside explanation and task utility.
 

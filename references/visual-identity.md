@@ -20,6 +20,8 @@ For each useful reference, keep a short note: observed mechanism and evidence lo
 
 Extract mechanisms such as a stable task area beside active imagery, a portrait becoming a narrative frame, or consistent media framing across routes. Rebuild them around the project. Do not import another site's palette, signature typeface, subject, and composition as a package.
 
+When additional examples could strengthen the direction or clarify a mechanism, use [external reference research](external-references.md) to find, compare, and vet relevant work before committing. Supplied references are a starting point, not the limit of the available vocabulary.
+
 ## Turn Evidence Into Direction
 
 Connect a project truth to a visual thesis, recurring identity anchors, and a content spine. Keep assumptions reversible when evidence is thin.
