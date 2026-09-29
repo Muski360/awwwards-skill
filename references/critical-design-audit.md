@@ -21,6 +21,8 @@ Record material findings with evidence, impact, disposition, and intended outcom
 
 Treat copy as interface material: preserve the subject, action, constraint, and proof. Remove repeated claims and marketing filler; retain the project's voice. Check errors, labels, confirmations, and help text as well as headlines.
 
+Audit section eyebrows, subtitles, and mini-headings by mentally removing them. If the heading, content, and navigation still communicate the same hierarchy and context, remove the extra label without replacing it with another decorative phrase. Keep labels that add useful context, distinguish sections under expressive headings, or identify chapters used in navigation. Inspect repeated section-intro patterns across the page as well as individual wording. Preserve meaningful headings and accessible names when removing redundant visual labels.
+
 For a prominent treatment, identify what is lost if it disappears. Orientation, hierarchy, feedback, narrative, atmosphere, and identity can all be valuable. Question layers that compete, repeat a message, or impose an unrelated interaction burden. Simplify when the benefit is equivalent; preserve expressive detail when it improves the experience.
 
 Use the signature experience pass in [SKILL.md](../SKILL.md) to investigate opportunities beyond defect removal.

@@ -17,6 +17,7 @@ These are diagnostic signals, not banned ingredients. A gradient, card, cursor, 
 | Stock abstract 3D | A floating object has no authored relationship to the project | Derive a spatial form, transformation, or atmosphere from identity; compare live rendering with a strong still |
 | Effect stack | Grain, glow, parallax, cursor, marquee, and tilt demand attention together | Sequence attention through a shared motion grammar and stable reading areas |
 | Information echo | Labels, icons, text, and helper copy repeat the same point | Consolidate the signal and make the next decision clear |
+| Section-label boilerplate | Small labels such as “My Story” on an `/about` page repeat context already clear from the main heading or content, or recur before every section by default | Apply the [copy audit](critical-design-audit.md#copy-and-complexity); keep only labels with a distinct hierarchy, context, or navigation role |
 | Decorative density | Frames, badges, grids, and rules add noise without meaningful rhythm | Keep framing that organizes content or expresses identity; remove unrelated layers |
 | Scroll staging | Input is blocked or delayed to force animation | Preserve native progress and a direct path through the narrative |
 | Custom cursor | Lag, obstruction, or novelty outweighs identity and feedback | Improve the response and pointing affordances, or keep the system cursor |

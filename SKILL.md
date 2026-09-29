@@ -52,7 +52,7 @@ Inspect and use strong real material before sourcing or generating replacements.
 1. Establish the context and baseline. For an existing site, capture relevant routes and states, including desktop and mobile when tools permit. For a new site, assess the brief, content, assets, and feasibility. Protect successful decisions.
 2. Classify material findings as **preserve**, **refine**, **simplify**, **remove**, **replace**, or **introduce**. Resolve broken tasks, accessibility, content integrity, and loading failures first; choose remaining work by expected project value and risk.
 3. Run the signature experience pass below. Make a focused plan connecting composition, typography, media, and behavior. Keep working notes brief; proceed with authorized edits.
-4. Build a semantic, responsive, visible core. Prototype uncertain signature mechanics early enough to change direction, with readable content and useful actions available throughout.
+4. Build a semantic, responsive, visible core. Prototype uncertain signature mechanics early enough to change direction, with readable content and useful actions available throughout. Avoid default section labels; use the [copy audit](references/critical-design-audit.md#copy-and-complexity) to judge eyebrows, subtitles, and mini-headings.
 5. Integrate the chosen interactions with the lightest reliable implementation. Compare native capabilities, the existing stack, and established libraries; choose by capability, lifecycle, cost, and maintainability.
 6. Inspect the rendered result, challenge your own changes, and refine until it shows a net improvement. A successful build alone does not establish visual quality.
 
