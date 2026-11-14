@@ -1,4 +1,4 @@
 interface:
   display_name: "Awwwards Art Direction"
   short_description: "Build and audit distinctive visual experiences"
-  default_prompt: "Use $awwwards-skill to understand this project's goals, assets, and references, develop its visual direction and signature opportunities, then implement and verify the work within my requested scope."
+  default_prompt: "Use $awwwards-skill to understand this project's context, research relevant work and compare directions when visually ambitious, then implement and verify the chosen experience within my requested scope."

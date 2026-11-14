@@ -2,7 +2,7 @@
 
 An [Agent Skill](https://agentskills.io/specification) for auditing, art-directing, building, and redesigning distinctive websites. It works from the project's audience, content, assets, and constraints to develop a coherent visual and interaction system.
 
-A signature experience pass investigates memorable first viewports and project-specific moments. Expressive typography, media, motion, 3D, cursors, and custom 404 pages are options; the project determines which belong. Accessibility, responsive composition, performance, and finish are part of the design process.
+For visually ambitious work, research informs the direction before implementation. Compare approaches grounded in the project's context, then develop composition, typography, media, and behavior across the whole journey. Expressive motion, 3D, unusual navigation, and quiet compositions remain available when they serve the project. Accessibility, responsive composition, performance, and finish are part of art direction.
 
 Independent project; not affiliated with Awwwards and does not predict or guarantee awards.
 
@@ -10,12 +10,21 @@ Independent project; not affiliated with Awwwards and does not predict or guaran
 
 ## Install
 
-Keep the `awwwards-skill` folder intact, including `SKILL.md`, `references/`, and `agents/`. Place it in a supported skill directory:
+Claude Code and Codex are the primary targets. Keep the `awwwards-skill` folder intact, including `SKILL.md`, `references/`, and `agents/`.
 
 | Environment | Project directory |
 | --- | --- |
-| [Codex](https://learn.chatgpt.com/docs/build-skills) | `.agents/skills/awwwards-skill` |
 | [Claude Code](https://code.claude.com/docs/en/skills) | `.claude/skills/awwwards-skill` |
+| [Codex](https://learn.chatgpt.com/docs/build-skills) | `.agents/skills/awwwards-skill` |
+
+Claude Code also supports `~/.claude/skills/awwwards-skill`; Codex supports `~/.agents/skills/awwwards-skill`.
+
+### Other clients
+
+The skill uses the shared Agent Skills format. Other clients have their own discovery and tool behavior; consult their documentation for supported locations:
+
+| Environment | Project directory |
+| --- | --- |
 | [Gemini CLI](https://geminicli.com/docs/cli/using-agent-skills/) | `.gemini/skills/awwwards-skill` or `.agents/skills/awwwards-skill` |
 | [Cursor](https://cursor.com/docs/skills) | `.cursor/skills/awwwards-skill` or `.agents/skills/awwwards-skill` |
 | [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) | `.github/skills/awwwards-skill`, `.claude/skills/awwwards-skill`, or `.agents/skills/awwwards-skill` |
@@ -23,17 +32,17 @@ Keep the `awwwards-skill` folder intact, including `SKILL.md`, `references/`, an
 | [Cline](https://docs.cline.bot/customization/skills) | `.cline/skills/awwwards-skill` or `.claude/skills/awwwards-skill` |
 | [Roo Code](https://roocodeinc.github.io/Roo-Code/features/skills/) | `.roo/skills/awwwards-skill` or `.agents/skills/awwwards-skill` |
 
-Codex also supports `~/.agents/skills/awwwards-skill`; Claude Code supports `~/.claude/skills/awwwards-skill`. Follow the linked client documentation for other personal/global locations.
+Follow the linked client documentation for personal/global locations.
 
 For clients without native skill support, supply `SKILL.md` as task instructions and make its reference files available. Avoid duplicating the body into agent rule files. `agents/openai.yaml` provides optional OpenAI interface metadata; it does not require an MCP server.
 
 ## Get Better Results
 
-Results improve substantially when you supply real copy, brand assets, fonts and usage information, photography, and relevant video or 3D files. Add screenshots or recordings of desired interactions, reference websites, project goals, intended feeling, must-keep/must-avoid decisions, and technical constraints such as browsers, devices, stack, and performance budget.
+Supply real copy, brand assets, fonts and usage information, photography, and relevant video or 3D files. Add screenshots or recordings of desired interactions, reference websites, project goals, intended feeling, must-keep/must-avoid decisions, and technical constraints such as browsers, devices, stack, and performance budget.
 
 Explain what interests you in a reference: its pacing, type, framing, transitions, or interaction. The skill inspects that material and reinterprets its mechanisms through your project's identity. It preserves strong existing work and labels missing evidence.
 
-When useful, it researches additional sites, experiments, libraries, and open-source interactions before choosing a direction. Curated references provide starting points for learning mechanisms and assessing implementation; they are not fixed recipes or default dependencies.
+For visually ambitious work, it researches relevant sources before settling on a direction: supplied references, the curated GitHub catalog, and external sources such as Awwwards, Codrops, open-source experiments, and the project's own field. It compares different ways to express the project's purpose and adapts useful concepts and techniques. Curated sources are starting points, with no preferred aesthetic or default dependency. Narrow changes use research only when a concrete uncertainty warrants it; unavailable tools and evidence gaps are reported.
 
 ## Invoke
 
@@ -60,39 +69,29 @@ Use $awwwards-skill to turn this template-like product site into an experience g
 **Ambitious portfolio or campaign**
 
 ```text
-Use $awwwards-skill to build a memorable portfolio from these portraits, films, fonts, and reference recordings. Reinterpret their framing and pacing, develop a signature opening and mobile composition, and consider a matching 404 where worthwhile.
+Use $awwwards-skill to build a memorable portfolio from these portraits, films, fonts, and reference recordings. Research relevant work, compare directions grounded in this body of work, and implement a coherent journey across projects, navigation, and mobile layouts. Verify the result within the requested scope.
 ```
 
 ## What's Included
 
-[SKILL.md](SKILL.md) handles scope, context, the signature pass, implementation, and verification. Specialist guidance loads when needed:
+[SKILL.md](SKILL.md) handles scope, context, direction, implementation, and verification. Specialist guidance loads at the relevant decision:
 
-- [Visual identity](references/visual-identity.md): assets, reference analysis, and art direction.
-- [External references](references/external-references.md): selective research, seven starting points, adaptation, and technical source review.
-- [Critical design audit](references/critical-design-audit.md): preservation, changes, and exceptional states.
-- [SLOP patterns](references/slop-patterns.md): diagnose generic treatments.
-- [Motion and implementation](references/motion-and-implementation.md): native APIs, libraries, input, media, and lifecycle.
-- [Evaluation framework](references/evaluation-framework.md): quality, technical acceptance, and optional comparisons.
-- [Reformulation examples](references/examples.md): contextual mechanisms and alternatives.
+| Reference | Use |
+| --- | --- |
+| [Visual identity](references/visual-identity.md) | Inspect assets and references; compare and develop directions. |
+| [External research](references/external-references.md) | Find, inspect, and adapt relevant work; decide when evidence is sufficient. |
+| [Reference catalog](references/reference-catalog.md) | Select relevant GitHub starting points and investigate their techniques. |
+| [Critical design audit](references/critical-design-audit.md) | Preserve strengths and prioritize changes in an existing experience. |
+| [SLOP patterns](references/slop-patterns.md) | Diagnose generic decisions without banning visual ingredients. |
+| [Motion and implementation](references/motion-and-implementation.md) | Choose mechanisms and handle input, media, lifecycle, and failure. |
+| [Evaluation framework](references/evaluation-framework.md) | Review quality and technical acceptance with evidence. |
+| [Reformulation examples](references/examples.md) | Follow contextual reasoning when a concept remains generic. |
 
 Browser automation, Lighthouse, image generation, and animation/3D libraries are conditional capabilities. Agents report unavailable tools and unverified results.
 
-## Examples
+## Audit and Evaluation
 
-The Before/After images below are intentional repeated banner placeholders, not demonstrated results.
-
- - Before:
- <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
-
- - After:
- <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
-
-
- - Before:
- <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
-
- - After:
- <img width="2170" height="725" alt="Awwwards Skill banner" src="https://github.com/user-attachments/assets/52fe72d6-cb6b-43ca-8b99-a22e9e1484fd" />
+See the [evolution record](evals/evolution.md) for the audit, before/after instruction changes, conceptual trials, executed checks, and limitations. Conceptual trials assess the directions proposed by agents; they do not establish the visual quality of implemented websites or guarantee diversity across future projects.
 
 ## Author
 

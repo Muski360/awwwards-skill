@@ -1,6 +1,6 @@
 # Motion and Implementation
 
-Use for consequential animation, transitions, scrolling, cursors, heavy media, WebGL, and 3D. Start with the signature candidate and constraints from [SKILL.md](../SKILL.md). Judge identity, atmosphere, feedback, and narrative alongside usability; movement need not explain a physical product to earn its place.
+Use for consequential animation, transitions, scrolling, cursors, heavy media, WebGL, and 3D. Start with the chosen direction and constraints from [SKILL.md](../SKILL.md). Judge identity, atmosphere, feedback, and narrative alongside usability; movement need not explain a physical product to earn its place.
 
 ## Specify the Behavior
 

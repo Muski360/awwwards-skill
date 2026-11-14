@@ -14,7 +14,11 @@ Use for finished-experience reviews, comparisons, or requested scoring. Default 
 | Responsive art direction | Intentional recomposition across small, intermediate, and large layouts |
 | Finish | Spacing, type details, crops, state changes, route continuity, loading, errors, and edge cases |
 
-Transferability is a diagnostic signal, not a gate. Familiar controls or a quiet design can fit the brief. A prominent generic treatment deserves attention when it weakens the project's identity or purpose.
+## Project Fit and Transferability
+
+Describe the experience without its brand name. Ask whether changing only the name, accent color, or focal object would leave the same rationale and structure equally suitable for an unrelated project. Investigate when that interchangeability weakens the intended meaning. Familiar controls, shared conventions, and deliberate restraint can remain; distinctiveness must serve the brief.
+
+When comparing directions or outputs from different briefs, examine the reading path, information density, type roles, media relationships, spatial structure, and interaction logic. Differences in palette alone do not establish distinct directions. Look across the journey and mobile composition, not only at the opening viewport.
 
 ## Technical Acceptance
 
@@ -30,15 +34,17 @@ Core task failures, inaccessible core controls, fabricated claims, or loss of th
 
 Technical failures cannot be averaged away by visual scores. Automated accessibility tools and Lighthouse supply partial evidence; they do not certify the whole experience. Use current [WCAG guidance](https://www.w3.org/TR/WCAG22/) and the project's stated targets.
 
-## Evidence and Dispositions
+## Evidence and Comparison
 
-Cite a route, viewport, state, timestamp, element, or source location for each material finding. Separate observed failures from inferred risks. Without rendered evidence, avoid numeric visual scores and identify what remains unverified.
+Cite the inspected route, viewport, state, timestamp, element, or source location. Separate rendered observations, source evidence, inference, and unknowns. Source inspection can establish implementation choices; it cannot prove perceived quality, runtime behavior, accessibility, or performance. Report measurements with their build, tool, device or engine, conditions, and affected routes. Without rendered evidence, avoid numeric visual scores.
 
-For each significant strength or weakness, provide its impact, **preserve/refine/simplify/remove/replace/introduce** disposition, and concrete next action. Prioritize by severity and expected project value. Do not require a finding in every dimension.
+For before/after comparisons, match content, viewport, state, capture conditions, and consequential interactions. Identify preserved strengths, the most consequential improvement, and the weakest changed moment; include secondary routes and reduced-capability paths affected by the work. Revise changes that produce no net improvement. Use the [audit guide](critical-design-audit.md) for finding format, dispositions, and priority.
+
+Added complexity must repay its cost through the intended experience. Identity, atmosphere, delight, and craft count alongside comprehension and task utility. Judge an expressive project by its lasting impression as well as usability; judge a quiet direction by whether its restraint strengthens the outcome.
 
 ## Optional Comparison Scores
 
-Only when requested and matched rendered evidence exists, score iterations of the same project. Match content, viewport, state, capture conditions, and consequential interactions. If the user supplied no rubric, use Design 40%, Usability 30%, Creativity 20%, Content 10% as an internal comparison convention. Report technical acceptance separately and withhold a composite when core failures or material evidence gaps prevent a fair comparison.
+Only when requested and matched rendered evidence exists, score iterations of the same project. If the user supplied no rubric, use Design 40%, Usability 30%, Creativity 20%, Content 10% as an internal comparison convention. Report technical acceptance separately and withhold a composite when core failures or material evidence gaps prevent a fair comparison.
 
 Use whole numbers with criterion-specific reasons:
 
@@ -51,7 +57,3 @@ Use whole numbers with criterion-specific reasons:
 | 9–10 | Exceptional coherence and finish across inspected states; little material weakness observed |
 
 These bands do not correspond to awards. Do not claim statistical precision or rank unrelated brands against one aesthetic. A single-site review can use qualitative assessments.
-
-## Net Improvement
-
-Compare the result with the baseline. Identify preserved strengths, the most consequential improvement, and the weakest remaining moment. Added complexity passes only when it improves the intended experience enough to justify its cost. For expressive work, revisit what someone will remember five minutes later; for quiet work, judge whether restraint strengthens the intended outcome.

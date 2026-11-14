@@ -1,6 +1,6 @@
 # Critical Design Audit
 
-Use for an existing-site audit or a substantial redesign. Follow the context profile in [SKILL.md](../SKILL.md); collect evidence before choosing changes. A greenfield brief needs an assessment of content, assets, and feasibility, not a fictional baseline.
+Use for an existing-site audit or a substantial redesign. Establish context through [SKILL.md](../SKILL.md); collect evidence before choosing changes. A greenfield brief needs an assessment of content, assets, and feasibility, not a fictional baseline.
 
 ## Inspect the Experience
 
@@ -8,24 +8,24 @@ Capture relevant routes, states, and desktop/mobile views when possible. Inspect
 
 | Area | Inspect together |
 | --- | --- |
-| Identity and first impression | Intended feeling, first viewport, dominant subject, visual thesis, typography, originality, and coherent use of brand assets |
+| Identity | Intended feeling, visual thesis, typography, originality, and coherent use of brand assets across the opening and subsequent experience |
 | Hierarchy and pacing | Reading path, density, spacing, scale, crops, section rhythm, and relationships between text and media |
 | Content | Real copy, evidence, labels, actions, repetition, and what the visitor needs next |
 | Interaction | Navigation, feedback, motion, transitions, scroll, cursor, touch, keyboard, and recovery |
 | Responsive art direction | Small and intermediate compositions, portrait/landscape, reading order, long text, and changes in input |
 | Implementation | Semantics, accessibility, loading, rendering cost, dependencies, lifecycle, browser support, and resilience |
 
-Record material findings with evidence, impact, disposition, and intended outcome. Use **preserve**, **refine**, **simplify**, **remove**, **replace**, or **introduce**. Do not manufacture findings to fill categories.
+Record material findings with an evidence location, impact, disposition, and intended outcome. Use **preserve**, **refine**, **simplify**, **remove**, **replace**, or **introduce**. Do not manufacture findings to fill categories. Distinguish observed failures from inferred risks; use the [evaluation framework](evaluation-framework.md#evidence-and-comparison) for evidence limits and comparisons.
 
 ## Copy and Complexity
 
 Treat copy as interface material: preserve the subject, action, constraint, and proof. Remove repeated claims and marketing filler; retain the project's voice. Check errors, labels, confirmations, and help text as well as headlines.
 
-Audit section eyebrows, subtitles, and mini-headings by mentally removing them. If the heading, content, and navigation still communicate the same hierarchy and context, remove the extra label without replacing it with another decorative phrase. Keep labels that add useful context, distinguish sections under expressive headings, or identify chapters used in navigation. Inspect repeated section-intro patterns across the page as well as individual wording. Preserve meaningful headings and accessible names when removing redundant visual labels.
+Mentally remove eyebrows, subtitles, and mini-headings. Remove a redundant label when heading, content, and navigation retain the same hierarchy and context; do not replace it with another decorative phrase. Keep useful context, labels beneath expressive headings, and navigable chapter names. Inspect repeated section-intro patterns, preserving meaningful headings and accessible names.
 
 For a prominent treatment, identify what is lost if it disappears. Orientation, hierarchy, feedback, narrative, atmosphere, and identity can all be valuable. Question layers that compete, repeat a message, or impose an unrelated interaction burden. Simplify when the benefit is equivalent; preserve expressive detail when it improves the experience.
 
-Use the signature experience pass in [SKILL.md](../SKILL.md) to investigate opportunities beyond defect removal.
+For opportunities beyond defect removal, use the direction workflow in [SKILL.md](../SKILL.md).
 
 ## 404 and Exceptional States
 
@@ -35,8 +35,8 @@ When justified, extend the site's existing type, imagery, framing, illustration,
 
 Apply the same judgment to loading, empty, offline, error, and transitional states within scope. Preserve user input and offer a useful recovery action where relevant. Distinguish real progress from a decorative transition; avoid fabricated percentages, artificial waits, or animation that delays recovery.
 
-## Prioritize and Re-Audit
+## Prioritize
 
-Fix failures in core tasks, accessibility, content integrity, and loading resilience first. For other findings, compare expected benefit, severity, reach, and implementation risk. Keep accessibility and performance constraints active while developing visual identity and polish.
+Fix failures in core tasks, accessibility, content integrity, and loading resilience first. For other findings, compare expected benefit, severity, reach, and implementation risk. A weak expressive moment may matter greatly to a campaign and little to a utility page; set priority by project impact, not by a preferred aesthetic. Preserve successful decisions and expressive detail when they contribute value.
 
-After edits, revisit the affected routes and states with comparable evidence. Confirm preserved strengths, a clearer content path, a stronger project identity, and usable reduced-capability paths. Refine or remove changes that do not improve the experience. Report uncertainty rather than awarding yourself a pass from source inspection alone.
+After authorized edits, revisit affected routes and states. Use [evaluation](evaluation-framework.md) for a finished review or before/after comparison; routine fixes need only checks relevant to the changed behavior.
